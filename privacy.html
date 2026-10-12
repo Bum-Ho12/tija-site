@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tija Privacy Policy</title>
+  <meta name="description" content="What data Tija collects, how it's used and shared, and the choices you have.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1c1b1f;
+      --muted: #5f5c66;
+      --accent: #6750a4;
+      --card: #f6f3fa;
+      --border: #e3dfe9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141218;
+        --fg: #e6e0e9;
+        --muted: #aca6b4;
+        --accent: #cfbcff;
+        --card: #1f1c25;
+        --border: #36323e;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+    h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 8px; }
+    h2 { font-size: 1.25rem; margin: 40px 0 8px; }
+    h3 { font-size: 1.05rem; margin: 24px 0 4px; }
+    .lede { color: var(--muted); margin-top: 0; }
+    ul { padding-left: 1.3rem; }
+    li { margin: 6px 0; }
+    a { color: var(--accent); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    .table-wrap { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    th { color: var(--muted); font-weight: 600; }
+    footer { margin-top: 48px; color: var(--muted); font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Tija Privacy Policy</h1>
+    <p class="lede">Effective October 12, 2026</p>
+
+    <div class="card">
+      <strong>In short:</strong> Tija works on your device first. Without an
+      account, your notes never leave your phone. If you create an account,
+      your notes are stored on our servers so they sync between your devices.
+      The AI assistant is off until you turn it on, and you choose where it
+      runs. We don't sell your data, show ads, or use analytics or tracking.
+    </div>
+
+    <p>
+      This policy explains what the Tija app ("Tija", "we", "us") collects,
+      why, who else processes it, and the choices you have. It applies to the
+      Tija app on Android and the websites linked from it.
+    </p>
+
+    <h2>1. Using Tija without an account</h2>
+    <p>
+      Everything you create (tasks, notes, folders, templates, reminders and
+      attachments) is stored only on your device. We don't receive it. A few
+      optional features still contact other services from your device; they
+      are listed in <a href="#features">section 4</a>.
+    </p>
+
+    <h2>2. If you create an account</h2>
+    <p>An account is optional. It lets you back up your work and sync it
+      across devices. With an account we store:</p>
+    <ul>
+      <li><strong>Account details:</strong> your email address and a securely
+        hashed password.</li>
+      <li><strong>Profile:</strong> your name, username and, if you add one,
+        a profile picture.</li>
+      <li><strong>Your content:</strong> tasks, notes, folders, templates,
+        reminders and files you attach, so they sync between your devices.</li>
+      <li><strong>Sync records:</strong> which device made a change and when,
+        so edits from different devices merge correctly.</li>
+    </ul>
+    <p>
+      This data is stored with Supabase, our hosting provider, in the European
+      Union (Ireland). It's encrypted in transit and access is limited to your
+      account.
+    </p>
+
+    <h2>3. The AI assistant</h2>
+    <p>
+      The AI assistant is optional and off by default. When you use it, the
+      text it needs for that request (for example the note you asked it to
+      summarize) is sent to the AI you chose in Settings → AI:
+    </p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Choice</th><th>Where your text goes</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>On this device</strong></td>
+            <td>Nowhere. The AI built into your phone, or a model you
+              download, runs entirely on the device. Models are downloaded
+              from Hugging Face.</td>
+          </tr>
+          <tr>
+            <td><strong>Tija Cloud</strong> (needs an account)</td>
+            <td>Our server, which sends it to Anthropic (Claude) to generate
+              the answer. We keep a count of your requests per day to apply
+              the daily allowance; we don't store your prompts or the
+              answers.</td>
+          </tr>
+          <tr>
+            <td><strong>Your own model</strong></td>
+            <td>Directly from your device to the server or provider you set
+              up (for example Ollama or LM Studio on your network, or OpenAI,
+              Google Gemini, Mistral, Groq or OpenRouter with your own API
+              key). Their own privacy policies apply. Your API key is stored
+              encrypted on your device and is never sent to us.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Search by meaning and "Ask Tija"</h3>
+    <p>
+      With an account and the AI assistant turned on, Tija can search your
+      notes by meaning. To do this, our server converts your synced notes into
+      search indexes (lists of numbers that represent meaning), and your
+      search is converted the same way. English text is processed on our own
+      servers; notes and searches in other languages may be sent to Voyage AI
+      for this step. The indexes are stored with your account and deleted
+      with it.
+    </p>
+
+    <h3>Connected AI apps</h3>
+    <p>
+      You can let other AI apps, such as Claude Desktop, Claude Code or
+      Cursor, read (and, if you allow it, change) your synced notes, using an
+      access token you create in Tija. Those apps then handle your notes
+      under their own privacy policies. You can revoke a token at any time in
+      Settings → AI.
+    </p>
+
+    <h3>Reporting AI responses</h3>
+    <p>
+      If you report an AI response, we receive the response, the reason you
+      chose, any comment you add, and which AI model was used. We use reports
+      to find and fix harmful or incorrect output.
+    </p>
+
+    <h2 id="features">4. Other features that contact outside services</h2>
+    <ul>
+      <li><strong>Link icons:</strong> to show an icon for a link you save,
+        the link's domain name (for example <em>example.com</em>, not the full
+        address) is sent to Google's favicon service.</li>
+      <li><strong>Link summaries:</strong> the page is downloaded directly by
+        your device, then summarized by the AI you chose.</li>
+      <li><strong>Bug reports and feedback:</strong> if you send one, we
+        receive what you write, the email address you enter and, if you add
+        them, screenshots and device details.</li>
+      <li><strong>Reminders and the morning brief</strong> are created on
+        your device and send nothing to us.</li>
+    </ul>
+
+    <h2>5. What we don't do</h2>
+    <ul>
+      <li>We don't sell or rent your data.</li>
+      <li>We don't show ads or use advertising IDs.</li>
+      <li>We don't use analytics, tracking or crash-reporting SDKs.</li>
+      <li>We don't use your notes to train AI models.</li>
+    </ul>
+
+    <h2>6. Who processes data for us</h2>
+    <ul>
+      <li><strong>Supabase</strong>: account, database, file storage and
+        server functions (EU, Ireland).</li>
+      <li><strong>Anthropic</strong>: generates AI answers for Tija Cloud.</li>
+      <li><strong>Voyage AI</strong>: creates search indexes for notes that
+        aren't in English.</li>
+      <li><strong>Google</strong>: email delivery for support messages and
+        reports; link icons.</li>
+    </ul>
+    <p>
+      They process data only to provide these services to us. Services you
+      connect yourself (your own AI model or provider, and connected AI apps)
+      are chosen by you and act under their own terms.
+    </p>
+
+    <h2>7. How long we keep data</h2>
+    <ul>
+      <li>Account data and synced content: until you delete it or delete your
+        account.</li>
+      <li>Daily AI request counts: kept with your account.</li>
+      <li>Support emails and reports: as long as needed to handle them.</li>
+      <li>Copies in our hosting provider's routine backups are removed when
+        those backups expire.</li>
+    </ul>
+
+    <h2>8. Your choices and rights</h2>
+    <ul>
+      <li><strong>Use Tija without an account</strong>, or turn the AI
+        assistant off at any time.</li>
+      <li><strong>Edit or delete</strong> any item; deletes sync to your
+        other devices.</li>
+      <li><strong>Delete your account</strong> in the app (Profile → Cloud
+        Sync → Delete Account) or
+        <a href="delete-account.html">by request</a>. This permanently deletes
+        your account and all data stored with it.</li>
+      <li><strong>Access or correct</strong> your data, or ask a question
+        about it, by emailing us.</li>
+    </ul>
+    <p>
+      Depending on where you live (for example the EU, UK or Kenya), you may
+      have further rights under data protection law, including to object to
+      processing or to complain to your data protection authority.
+    </p>
+
+    <h2>9. Security</h2>
+    <p>
+      Data is encrypted in transit between the app and our servers. Each
+      account can only access its own data. Access tokens for connected AI
+      apps are stored only as secure hashes. No system is perfectly secure, so
+      please use a strong, unique password.
+    </p>
+
+    <h2>10. Children</h2>
+    <p>
+      Tija isn't directed at children under 13, and we don't knowingly collect
+      their personal data. If you believe a child has created an account,
+      contact us and we'll delete it.
+    </p>
+
+    <h2>11. Changes to this policy</h2>
+    <p>
+      We'll update this page when our practices change and update the date
+      at the top. Significant changes will also be mentioned in the app's
+      release notes.
+    </p>
+
+    <h2>12. Contact</h2>
+    <p>
+      Questions or requests:
+      <a href="mailto:npomhoyr@gmail.com">npomhoyr@gmail.com</a>
+    </p>
+
+    <footer>Tija · <a href="index.html">Home</a> ·
+      <a href="delete-account.html">Delete your account</a></footer>
+  </main>
+</body>
+</html>
