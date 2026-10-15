@@ -1,0 +1,62 @@
+<!doctype html>
+<!-- Source for assets/img/og-image.png (1200×630). Regenerate with:
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless \
+       --screenshot=assets/img/og-image.png --window-size=1200,630 \
+       --hide-scrollbars tools/og-image.html -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tija social image</title>
+<style>
+  @font-face { font-family: "Inter"; font-weight: 400; src: url("../assets/fonts/Inter-Regular.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-weight: 700; src: url("../assets/fonts/Inter-Bold.woff2") format("woff2"); }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: "Inter", sans-serif;
+    color: #1b1f1c;
+    background:
+      radial-gradient(900px 520px at 100% 0%, #d7efd8, transparent 70%),
+      radial-gradient(700px 420px at 0% 100%, #e3f4e4, transparent 70%),
+      #f6fbf6;
+    display: flex;
+    align-items: center;
+    padding: 0 96px;
+    box-sizing: border-box;
+    gap: 56px;
+  }
+  .text { flex: 1; }
+  .brand { display: flex; align-items: center; gap: 20px; font-size: 44px; font-weight: 700; }
+  .brand img { width: 88px; height: 88px; border-radius: 22px; }
+  h1 { font-size: 58px; line-height: 1.08; letter-spacing: -0.03em; margin: 40px 0 24px; }
+  h1 em { font-style: normal; color: #2e7d32; }
+  p { font-size: 26px; color: #56605a; margin: 0; }
+  .card {
+    width: 330px;
+    padding: 28px;
+    border-radius: 28px;
+    background: rgb(255 255 255 / 75%);
+    border: 1px solid #dde6de;
+    box-shadow: 0 20px 50px rgb(16 32 20 / 10%);
+    display: grid;
+    gap: 14px;
+  }
+  .row { display: flex; align-items: center; gap: 14px; padding: 16px; border-radius: 14px; background: #fff; border: 1px solid #dde6de; font-size: 22px; }
+  .box { width: 22px; height: 22px; border-radius: 6px; border: 3px solid #2e7d32; box-sizing: border-box; }
+  .box.done { background: #2e7d32; }
+  .done-text { text-decoration: line-through; color: #56605a; }
+</style>
+</head>
+<body>
+  <div class="text">
+    <div class="brand"><img src="../assets/img/icon-192.png" alt="">Tija</div>
+    <h1>Notes, tasks and plans in one <em>calm place</em>.</h1>
+    <p>Works offline. Syncs when you want it to.</p>
+  </div>
+  <div class="card" aria-hidden="true">
+    <div class="row"><span class="box done"></span><span class="done-text">Draft project brief</span></div>
+    <div class="row"><span class="box"></span>Plan my day</div>
+    <div class="row"><span class="box"></span>Call the venue</div>
+    <div class="row"><span class="box"></span>Weekly review</div>
+  </div>
+</body>
+</html>

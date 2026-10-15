@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <!-- PARTIAL:head -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1411" media="(prefers-color-scheme: dark)">
+  <script>document.documentElement.className="js";try{var t=localStorage.getItem("tija-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/site.js" defer></script>
+  <!-- /PARTIAL:head -->
+  <title>Notes and the editor · Tija guide</title>
+  <meta name="description" content="Write in Tija: blocks, the slash menu, the formatting bar and shortcuts, checkboxes and radio buttons, images, links, and exporting to PDF or Markdown.">
+  <!-- PARTIAL:meta -->
+  <link rel="canonical" href="https://bum-ho12.github.io/tija-site/guide/notes-editor.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tija">
+  <meta property="og:title" content="Notes and the editor · Tija guide">
+  <meta property="og:description" content="Write in Tija: blocks, the slash menu, the formatting bar and shortcuts, checkboxes and radio buttons, images, links, and exporting to PDF or Markdown.">
+  <meta property="og:url" content="https://bum-ho12.github.io/tija-site/guide/notes-editor.html">
+  <meta property="og:image" content="https://bum-ho12.github.io/tija-site/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tija: notes, tasks and plans in one calm place">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- /PARTIAL:meta -->
+</head>
+<body>
+  <!-- PARTIAL:header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <img src="../assets/img/icon-128.png" alt="" width="32" height="32">
+        Tija
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="../guide/index.html" data-section="guide" aria-current="page">Guide</a>
+        <a href="../support.html" data-section="support">Support</a>
+        <a href="../whats-new.html" data-section="whats-new">What's new</a>
+        <a href="../privacy.html" data-section="privacy">Privacy</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-controls="site-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- /PARTIAL:header -->
+
+  <div class="container guide-layout">
+    <!-- PARTIAL:guide-sidebar -->
+      <aside class="guide-sidebar">
+        <details open>
+          <summary>Guide topics</summary>
+          <nav aria-label="Guide">
+            <p class="sidebar-title">User guide</p>
+            <ul>
+              <li><a href="../guide/index.html">Overview</a></li>
+              <li><a href="../guide/getting-started.html">Getting started</a></li>
+              <li><a href="../guide/notes-editor.html" aria-current="page">Notes &amp; the editor</a></li>
+              <li><a href="../guide/tasks-templates.html">Tasks, calendar &amp; templates</a></li>
+              <li><a href="../guide/reminders.html">Reminders</a></li>
+              <li><a href="../guide/sync-account.html">Account, sync &amp; data</a></li>
+              <li><a href="../guide/ai-assistant.html">AI assistant</a></li>
+              <li><a href="../guide/connect-ai-apps.html">Connect other AI apps</a></li>
+            </ul>
+          </nav>
+        </details>
+      </aside>
+    <!-- /PARTIAL:guide-sidebar -->
+
+    <main id="main" class="prose">
+      <p class="breadcrumb"><a href="index.html">Guide</a> / Notes &amp; the editor</p>
+      <h1>Notes &amp; the editor</h1>
+      <p class="lede">A note is made of blocks: paragraphs, headings, lists,
+        checkboxes, quotes, code and images. Mix them however you like.</p>
+
+      <h2 id="new-note">Start a note</h2>
+      <ol class="steps">
+        <li>Select <strong>Add</strong> (the <strong>+</strong> in the bottom bar
+          or sidebar).</li>
+        <li>Type a title where it says <strong>Title of File/Task</strong>.</li>
+        <li>Write in the first block, or select <strong>Add a block</strong>.</li>
+      </ol>
+      <p>There's no Save button: Tija saves as you go, once the note has a
+        title or some content.</p>
+      <p>When you open an existing note it's read-only, so you can't change it
+        by accident. Select the pencil to edit, and the ✓ when you're done.</p>
+
+      <h2 id="blocks">Blocks and the "/" menu</h2>
+      <p>Type <kbd>/</kbd> at the start of a block (or after a space) to change
+        what kind of block it is. Keep typing to filter the list; use
+        <kbd>↑</kbd> <kbd>↓</kbd> and <kbd>Enter</kbd> to choose, or
+        <kbd>Esc</kbd> to close it.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Item</th><th scope="col">Makes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Text</strong></td><td>A regular paragraph</td></tr>
+            <tr><td><strong>Heading 1</strong>, <strong>2</strong>, <strong>3</strong></td><td>Large, medium and small headings</td></tr>
+            <tr><td><strong>Bullet List</strong> / <strong>Numbered List</strong></td><td>Lists</td></tr>
+            <tr><td><strong>Checkbox</strong></td><td>A task checkbox you can tick</td></tr>
+            <tr><td><strong>Radio</strong></td><td>A single-choice option</td></tr>
+            <tr><td><strong>Quote</strong></td><td>A block quote</td></tr>
+            <tr><td><strong>Code</strong></td><td>A code block in a monospaced font</td></tr>
+            <tr><td><strong>Image</strong></td><td>A picture from your device</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The same types are in the bar under the editor:
+        <strong>Text</strong>, <strong>H1</strong>, <strong>H2</strong>,
+        <strong>H3</strong>, <strong>Image</strong>, <strong>List</strong>,
+        <strong>Number</strong>, <strong>Check</strong>, <strong>Radio</strong>,
+        <strong>Quote</strong> and <strong>Code</strong>. Press
+        <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <strong>Line break</strong>) for
+        a new line inside the same block.</p>
+      <p>With the AI assistant on, the "/" menu also has
+        <strong>AI:</strong> items such as <strong>AI: Summarize</strong>. See
+        <a href="ai-assistant.html#writing-tools">Writing tools</a>.</p>
+
+      <h2 id="formatting">The formatting bar</h2>
+      <p>Select some text and use the formatting bar, or a shortcut. On a Mac
+        use <kbd>⌘</kbd>; on Windows and Android keyboards use <kbd>Ctrl</kbd>.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Button</th><th scope="col">Shortcut</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Bold</strong></td><td><kbd>Ctrl</kbd> + <kbd>B</kbd></td></tr>
+            <tr><td><strong>Italic</strong></td><td><kbd>Ctrl</kbd> + <kbd>I</kbd></td></tr>
+            <tr><td><strong>Strikethrough</strong></td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd></td></tr>
+            <tr><td><strong>Inline code</strong></td><td><kbd>Ctrl</kbd> + <kbd>E</kbd></td></tr>
+            <tr><td><strong>Highlight</strong></td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd></td></tr>
+            <tr><td><strong>Link</strong></td><td><kbd>Ctrl</kbd> + <kbd>K</kbd></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Link</strong> opens <strong>Add link</strong>: enter the
+        <strong>Text</strong> and the <strong>Link</strong> (starting with
+        <code>https://</code>), then <strong>Apply</strong>. To change or remove
+        a link later, use <strong>Edit link</strong> → <strong>Remove</strong>.</p>
+
+      <h2 id="checkboxes">Checkboxes and radio buttons</h2>
+      <ul>
+        <li><strong>Checkbox</strong> items can each be ticked on their own:
+          good for to-do lists.</li>
+        <li><strong>Radio</strong> items are for picking one option. Choosing
+          one clears the others in the same group: good for "Venue: A / B /
+          C".</li>
+      </ul>
+      <p>Ticks and choices are saved straight away, and they're kept when you
+        export.</p>
+
+      <h2 id="images-links">Images, links and tables</h2>
+      <ul>
+        <li><strong>Images:</strong> choose <strong>Image</strong> and pick a
+          picture. Use <strong>Change Image</strong> to replace it.</li>
+        <li><strong>Links</strong> you add to a note are collected under the
+          editor as <strong>References</strong>. With the AI assistant on, you
+          can summarize a link from there.</li>
+        <li><strong>Tables:</strong> there's no table button yet. You can type
+          a table in Markdown style, with lines that start and end with
+          <code>|</code>; it's kept as you wrote it.</li>
+      </ul>
+
+      <h2 id="export">Export as PDF or Markdown</h2>
+      <ol class="steps">
+        <li>Open the note and select the <strong>⋯</strong> menu.</li>
+        <li>Choose <strong>Export as PDF</strong> or <strong>Export as
+          Markdown</strong>.</li>
+        <li>Pick where to send or save it from your device's share options.</li>
+      </ol>
+      <p>A note needs both a title and some content to export. Checkboxes and
+        radio buttons keep their state: in Markdown they're written as
+        <code>- [x]</code> and <code>- (x)</code>.</p>
+
+      <h2 id="organise">Pin, move and delete</h2>
+      <p>From the note's <strong>⋯</strong> menu, or the menu on its card:</p>
+      <ul>
+        <li><strong>Pin task</strong> keeps it in <strong>Pinned</strong>.</li>
+        <li><strong>Move to...</strong> puts it in a folder.</li>
+        <li><strong>Delete</strong> removes it (and from your other devices,
+          if you sync).</li>
+      </ul>
+
+      <nav class="pager" aria-label="Previous and next">
+        <a href="getting-started.html"><small>Previous</small>← Getting started</a>
+        <a class="next" href="tasks-templates.html"><small>Next</small>Tasks, calendar &amp; templates →</a>
+      </nav>
+    </main>
+
+    <aside class="toc" aria-label="On this page"><div><h2>On this page</h2><ul></ul></div></aside>
+  </div>
+
+  <!-- PARTIAL:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="../index.html">
+            <img src="../assets/img/icon-128.png" alt="" width="32" height="32">
+            Tija
+          </a>
+          <p style="margin-top:12px">Notes, tasks and plans in one calm place. Works offline, syncs when you want it to.</p>
+        </div>
+        <div>
+          <h2>Learn</h2>
+          <ul>
+            <li><a href="../guide/index.html">User guide</a></li>
+            <li><a href="../guide/getting-started.html">Getting started</a></li>
+            <li><a href="../guide/ai-assistant.html">AI assistant</a></li>
+            <li><a href="../whats-new.html">What's new</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Help</h2>
+          <ul>
+            <li><a href="../support.html">Support &amp; FAQ</a></li>
+            <li><a href="mailto:npomhoyr@gmail.com">Email us</a></li>
+            <li><a href="../delete-account.html">Delete your account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="../privacy.html">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Tija. No ads, no analytics, no tracking.</div>
+    </div>
+  </footer>
+  <!-- /PARTIAL:footer -->
+</body>
+</html>
