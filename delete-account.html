@@ -1,122 +1,119 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
+  <!-- PARTIAL:head -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1411" media="(prefers-color-scheme: dark)">
+  <script>document.documentElement.className="js";try{var t=localStorage.getItem("tija-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site.js" defer></script>
+  <!-- /PARTIAL:head -->
   <title>Delete Your Tija Account</title>
-  <meta name="description" content="How to delete your Tija account and the data stored with it.">
-  <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #1c1b1f;
-      --muted: #5f5c66;
-      --accent: #6750a4;
-      --danger: #b3261e;
-      --card: #f6f3fa;
-      --border: #e3dfe9;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #141218;
-        --fg: #e6e0e9;
-        --muted: #aca6b4;
-        --accent: #cfbcff;
-        --danger: #f2b8b5;
-        --card: #1f1c25;
-        --border: #36323e;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--fg);
-      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    }
-    main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
-    h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 8px; }
-    h2 { font-size: 1.2rem; margin: 36px 0 8px; }
-    p, li { color: var(--fg); }
-    .lede { color: var(--muted); margin-top: 0; }
-    ol, ul { padding-left: 1.3rem; }
-    li { margin: 6px 0; }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px 20px;
-      margin: 16px 0;
-    }
-    .warn { border-color: var(--danger); }
-    .warn strong { color: var(--danger); }
-    a { color: var(--accent); }
-    .button {
-      display: inline-block;
-      background: var(--accent);
-      color: var(--bg);
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 600;
-      margin-top: 4px;
-    }
-    footer { margin-top: 48px; color: var(--muted); font-size: 0.875rem; }
-  </style>
+  <meta name="description" content="How to delete your Tija account and the data stored with it, in the app or by email.">
+  <!-- PARTIAL:meta -->
+  <link rel="canonical" href="https://bum-ho12.github.io/tija-site/delete-account.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tija">
+  <meta property="og:title" content="Delete Your Tija Account">
+  <meta property="og:description" content="How to delete your Tija account and the data stored with it, in the app or by email.">
+  <meta property="og:url" content="https://bum-ho12.github.io/tija-site/delete-account.html">
+  <meta property="og:image" content="https://bum-ho12.github.io/tija-site/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tija: notes, tasks and plans in one calm place">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- /PARTIAL:meta -->
 </head>
 <body>
-  <main>
+  <!-- PARTIAL:header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/img/icon-128.png" alt="" width="32" height="32">
+        Tija
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="guide/index.html" data-section="guide">Guide</a>
+        <a href="support.html" data-section="support">Support</a>
+        <a href="whats-new.html" data-section="whats-new">What's new</a>
+        <a href="privacy.html" data-section="privacy">Privacy</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-controls="site-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- /PARTIAL:header -->
+
+  <main id="main" class="page-narrow prose">
     <h1>Delete your Tija account</h1>
     <p class="lede">
       Tija works without an account. If you created one to sync between
       devices, you can delete it and everything stored with it at any time.
     </p>
 
-    <h2>In the app (fastest)</h2>
-    <ol>
-      <li>Open Tija and go to <strong>Profile</strong>.</li>
-      <li>In <strong>Cloud Sync</strong>, under <strong>Account</strong>, tap
+    <h2 id="in-the-app">In the app (fastest)</h2>
+    <p>The steps are the same on a phone and on a computer.</p>
+    <ol class="steps">
+      <li>Open Tija and go to <strong>Profile</strong> (in the bottom bar on a
+        phone, or the sidebar on a computer).</li>
+      <li>In <strong>Cloud Sync</strong>, under <strong>Account</strong>, select
         <strong>Delete Account</strong>.</li>
       <li>Enter your password. Choose whether to also erase the notes on that
-        device, then tap <strong>Delete Account</strong>.</li>
+        device (<strong>Also erase notes on this device</strong>), then select
+        <strong>Delete Account</strong>.</li>
     </ol>
     <p>Your account is deleted straight away.</p>
 
-    <h2>Without the app</h2>
+    <h2 id="by-email">Without the app</h2>
     <p>
       If you no longer have the app, email us from the address you signed up
       with and we'll delete the account for you within 7 days.
     </p>
     <p>
-      <a class="button"
+      <a class="btn btn-primary"
          href="mailto:npomhoyr@gmail.com?subject=Delete%20my%20Tija%20account&amp;body=Please%20delete%20the%20Tija%20account%20for%20this%20email%20address.">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
         Email a deletion request
       </a>
     </p>
-    <p class="lede">
+    <p class="muted">
       We'll only act on requests sent from the account's own email address,
       and we'll reply to confirm once it's done.
     </p>
 
-    <h2>What gets deleted</h2>
-    <div class="card">
-      <ul>
-        <li>Your account: email address and password</li>
-        <li>Your profile: name, username and profile picture</li>
-        <li>Everything you synced: tasks, notes, folders, templates and
-          reminders</li>
-        <li>Files you attached to tasks</li>
-        <li>AI assistant data: usage counts and search indexes of your
-          notes</li>
-        <li>Access tokens for AI apps you connected (such as Claude Desktop or
-          Cursor)</li>
-      </ul>
-    </div>
-    <div class="card warn">
+    <h2 id="deleted">What gets deleted</h2>
+    <ul>
+      <li>Your account: email address and password</li>
+      <li>Your profile: name, username and profile picture</li>
+      <li>Everything you synced: tasks, notes, folders, templates and
+        reminders</li>
+      <li>Files you attached to tasks</li>
+      <li>AI assistant data: usage counts and search indexes of your
+        notes</li>
+      <li>Access tokens for AI apps you connected (such as Claude Desktop or
+        Cursor)</li>
+    </ul>
+    <div class="callout danger">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></svg>
       <p><strong>This can't be undone.</strong> Deleted data can't be
         recovered, and signing up again creates a new, empty account.</p>
     </div>
 
-    <h2>What isn't deleted</h2>
+    <h2 id="kept">What isn't deleted</h2>
     <ul>
       <li>Notes saved on your own devices stay there unless you choose to
         erase them in the app, or uninstall Tija.</li>
@@ -124,7 +121,48 @@
         those backups expire.</li>
     </ul>
 
-    <footer>Tija · Account deletion · <a href="privacy.html">Privacy policy</a></footer>
+    <p>See the <a href="privacy.html">privacy policy</a> for how your data is
+      handled while you have an account.</p>
   </main>
+
+  <!-- PARTIAL:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <img src="assets/img/icon-128.png" alt="" width="32" height="32">
+            Tija
+          </a>
+          <p style="margin-top:12px">Notes, tasks and plans in one calm place. Works offline, syncs when you want it to.</p>
+        </div>
+        <div>
+          <h2>Learn</h2>
+          <ul>
+            <li><a href="guide/index.html">User guide</a></li>
+            <li><a href="guide/getting-started.html">Getting started</a></li>
+            <li><a href="guide/ai-assistant.html">AI assistant</a></li>
+            <li><a href="whats-new.html">What's new</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Help</h2>
+          <ul>
+            <li><a href="support.html">Support &amp; FAQ</a></li>
+            <li><a href="mailto:npomhoyr@gmail.com">Email us</a></li>
+            <li><a href="delete-account.html">Delete your account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="privacy.html">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Tija. No ads, no analytics, no tracking.</div>
+    </div>
+  </footer>
+  <!-- /PARTIAL:footer -->
 </body>
 </html>

@@ -1,35 +1,276 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
+  <!-- PARTIAL:head -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tija</title>
-  <meta name="description" content="Tija: a minimal yet powerful productivity app with an offline-first approach.">
-  <style>
-    :root { --bg: #ffffff; --fg: #1c1b1f; --muted: #5f5c66; --accent: #6750a4; }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #141218; --fg: #e6e0e9; --muted: #aca6b4; --accent: #cfbcff; }
-    }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--fg);
-      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    }
-    main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
-    h1 { font-size: 1.9rem; margin: 0 0 8px; }
-    p { color: var(--muted); }
-    a { color: var(--accent); }
-  </style>
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1411" media="(prefers-color-scheme: dark)">
+  <script>document.documentElement.className="js";try{var t=localStorage.getItem("tija-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site.js" defer></script>
+  <!-- /PARTIAL:head -->
+  <title>Tija: notes, tasks and plans in one calm place</title>
+  <meta name="description" content="Tija is an offline-first app for notes, tasks, templates and reminders, with optional sync across devices and an optional AI assistant you control.">
+  <!-- PARTIAL:meta -->
+  <link rel="canonical" href="https://bum-ho12.github.io/tija-site/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tija">
+  <meta property="og:title" content="Tija: notes, tasks and plans in one calm place">
+  <meta property="og:description" content="Tija is an offline-first app for notes, tasks, templates and reminders, with optional sync across devices and an optional AI assistant you control.">
+  <meta property="og:url" content="https://bum-ho12.github.io/tija-site/">
+  <meta property="og:image" content="https://bum-ho12.github.io/tija-site/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tija: notes, tasks and plans in one calm place">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- /PARTIAL:meta -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Tija",
+    "description": "An offline-first app for notes, tasks, templates and reminders, with optional sync and an optional AI assistant.",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "Android",
+    "url": "https://bum-ho12.github.io/tija-site/",
+    "image": "https://bum-ho12.github.io/tija-site/assets/img/icon-512.png",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.bumho.tija",
+    "softwareVersion": "0.2.1"
+  }
+  </script>
 </head>
 <body>
-  <main>
-    <h1>Tija</h1>
-    <p>A minimal yet powerful productivity app with an offline-first approach.</p>
-    <ul>
-      <li><a href="privacy.html">Privacy policy</a></li>
-      <li><a href="delete-account.html">Delete your Tija account</a></li>
-    </ul>
+  <!-- PARTIAL:header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/img/icon-128.png" alt="" width="32" height="32">
+        Tija
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="guide/index.html" data-section="guide">Guide</a>
+        <a href="support.html" data-section="support">Support</a>
+        <a href="whats-new.html" data-section="whats-new">What's new</a>
+        <a href="privacy.html" data-section="privacy">Privacy</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-controls="site-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- /PARTIAL:header -->
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <ul class="chips eyebrow" aria-label="Highlights">
+            <li class="chip ok">Works offline</li>
+            <li class="chip">No ads or tracking</li>
+          </ul>
+          <h1>Notes, tasks and plans in one <em>calm place</em>.</h1>
+          <p class="lede">
+            Write your way, plan your days and get reminded on time. Tija keeps
+            your work on your device first, syncs it when you sign in, and
+            brings in an AI assistant only if you turn it on.
+          </p>
+          <div class="store-badges">
+            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.bumho.tija" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.2v17.6c0 .7.8 1.2 1.4.8l14.3-8.8c.6-.4.6-1.2 0-1.6L6.4 2.4C5.8 2 5 2.5 5 3.2Z"/></svg>
+              <div><small>Get it on</small><span>Google Play</span></div>
+            </a>
+            <span class="store-badge soon" aria-label="Microsoft Store: coming soon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg>
+              <div><small>Coming soon</small><span>Microsoft Store</span></div>
+            </span>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="app-head">
+            <img src="assets/img/icon-128.png" alt="" width="56" height="56">
+            <div><strong>Today</strong><br><small>3 due · 1 done</small></div>
+          </div>
+          <ul class="mock-list">
+            <li><span class="box done"></span><span class="done-text">Draft project brief</span></li>
+            <li><span class="box"></span>Call the venue<span class="due">11:00</span></li>
+            <li><span class="box"></span>Review budget notes<span class="due">14:30</span></li>
+            <li><span class="box"></span>Weekly review<span class="due">Fri</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="features">
+      <div class="section-head reveal">
+        <h2 id="features">Everything in one place</h2>
+        <p>Tija mixes notes and tasks, so a plan can start as a thought and
+          end as a checklist with a due date.</p>
+      </div>
+      <div class="grid">
+        <a class="card reveal" href="guide/notes-editor.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+          <h3>Write your way</h3>
+          <p>Mix text, lists and checklists, code, tables and images in a note.
+            The formatting bar adds bold, highlights and links as you type.</p>
+        </a>
+        <a class="card reveal" href="guide/tasks-templates.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></span>
+          <h3>Plan &amp; track</h3>
+          <p>Turn notes into tasks, give them due dates and see them on the
+            calendar. Start from templates and export as PDF or Markdown.</p>
+        </a>
+        <a class="card reveal" href="guide/ai-assistant.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2Z"/><path d="M19 3v4M17 5h4"/></svg></span>
+          <h3>Meet your assistant</h3>
+          <p>Capture a task in plain words, plan your day and ask questions
+            about your notes. Nothing is saved until you accept it.</p>
+        </a>
+        <a class="card reveal" href="guide/sync-account.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg></span>
+          <h3>On every device</h3>
+          <p>Tija works offline first. Sign in to back up your work and pick
+            up where you left off on any device.</p>
+        </a>
+        <a class="card reveal" href="guide/reminders.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></span>
+          <h3>Stay on track</h3>
+          <p>Reminders reach you even when Tija is in the background, plus a
+            morning brief and a home-screen widget on Android.</p>
+        </a>
+        <a class="card reveal" href="privacy.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span>
+          <h3>Private by design</h3>
+          <p>No account needed, no ads, no analytics. Without an account your
+            notes never leave your device.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="ai-choice">
+      <div class="section-head reveal">
+        <h2 id="ai-choice">Your AI, your choice</h2>
+        <p>The assistant is off until you turn it on. Then you decide where
+          your requests go.</p>
+      </div>
+      <div class="ai-strip">
+        <div class="card reveal">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></span>
+          <h3>On this device</h3>
+          <p>The AI built into your phone, or a model you download. Private
+            and works offline.</p>
+        </div>
+        <div class="card reveal">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></span>
+          <h3>Your own model</h3>
+          <p>Ollama or LM Studio on your computer or network, or a provider
+            with your own API key.</p>
+        </div>
+        <div class="card reveal">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg></span>
+          <h3>Tija Cloud</h3>
+          <p>Claude through your Tija account, with a daily allowance.
+            Needs sign-in.</p>
+        </div>
+      </div>
+      <p class="reveal" style="margin-top:20px"><a href="guide/ai-assistant.html">How the AI assistant works →</a></p>
+    </section>
+
+    <section class="section container" aria-labelledby="platforms">
+      <div class="section-head reveal">
+        <h2 id="platforms">Where you can get Tija</h2>
+      </div>
+      <div class="table-wrap reveal">
+        <table>
+          <thead><tr><th scope="col">Platform</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Android</strong></td><td><span class="chip ok">Available</span> on <a href="https://play.google.com/store/apps/details?id=com.bumho.tija" rel="noopener">Google Play</a></td></tr>
+            <tr><td><strong>Windows</strong></td><td><span class="chip">Coming soon</span> on the Microsoft Store</td></tr>
+            <tr><td><strong>iPhone and iPad</strong></td><td><span class="chip">Coming soon</span></td></tr>
+            <tr><td><strong>Mac</strong></td><td><span class="chip">Coming soon</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="help">
+      <div class="section-head reveal">
+        <h2 id="help">Need a hand?</h2>
+      </div>
+      <div class="grid">
+        <a class="card reveal" href="guide/index.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15Z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></span>
+          <h3>User guide</h3>
+          <p>Step-by-step help for every feature, from your first note to
+            connecting other AI apps.</p>
+          <span class="more">Open the guide →</span>
+        </a>
+        <a class="card reveal" href="support.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg></span>
+          <h3>Support &amp; FAQ</h3>
+          <p>Answers to common questions, fixes for common problems, and how
+            to reach us.</p>
+          <span class="more">Get help →</span>
+        </a>
+        <a class="card reveal" href="whats-new.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2Z"/></svg></span>
+          <h3>What's new</h3>
+          <p>Release notes for each version of Tija.</p>
+          <span class="more">See the changes →</span>
+        </a>
+      </div>
+    </section>
   </main>
+
+  <!-- PARTIAL:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <img src="assets/img/icon-128.png" alt="" width="32" height="32">
+            Tija
+          </a>
+          <p style="margin-top:12px">Notes, tasks and plans in one calm place. Works offline, syncs when you want it to.</p>
+        </div>
+        <div>
+          <h2>Learn</h2>
+          <ul>
+            <li><a href="guide/index.html">User guide</a></li>
+            <li><a href="guide/getting-started.html">Getting started</a></li>
+            <li><a href="guide/ai-assistant.html">AI assistant</a></li>
+            <li><a href="whats-new.html">What's new</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Help</h2>
+          <ul>
+            <li><a href="support.html">Support &amp; FAQ</a></li>
+            <li><a href="mailto:npomhoyr@gmail.com">Email us</a></li>
+            <li><a href="delete-account.html">Delete your account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="privacy.html">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Tija. No ads, no analytics, no tracking.</div>
+    </div>
+  </footer>
+  <!-- /PARTIAL:footer -->
 </body>
 </html>

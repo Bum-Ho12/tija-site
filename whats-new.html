@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <!-- PARTIAL:head -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1411" media="(prefers-color-scheme: dark)">
+  <script>document.documentElement.className="js";try{var t=localStorage.getItem("tija-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site.js" defer></script>
+  <!-- /PARTIAL:head -->
+  <title>What's new in Tija</title>
+  <meta name="description" content="Release notes for each version of Tija: new features, improvements and fixes.">
+  <!-- PARTIAL:meta -->
+  <link rel="canonical" href="https://bum-ho12.github.io/tija-site/whats-new.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tija">
+  <meta property="og:title" content="What's new in Tija">
+  <meta property="og:description" content="Release notes for each version of Tija: new features, improvements and fixes.">
+  <meta property="og:url" content="https://bum-ho12.github.io/tija-site/whats-new.html">
+  <meta property="og:image" content="https://bum-ho12.github.io/tija-site/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tija: notes, tasks and plans in one calm place">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- /PARTIAL:meta -->
+</head>
+<body>
+  <!-- PARTIAL:header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/img/icon-128.png" alt="" width="32" height="32">
+        Tija
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="guide/index.html" data-section="guide">Guide</a>
+        <a href="support.html" data-section="support">Support</a>
+        <a href="whats-new.html" data-section="whats-new" aria-current="page">What's new</a>
+        <a href="privacy.html" data-section="privacy">Privacy</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-controls="site-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- /PARTIAL:header -->
+
+  <main id="main" class="page-narrow prose">
+    <h1>What's new</h1>
+    <p class="lede">Release notes for each version of Tija. Your app shows its
+      version in Profile → App Info.</p>
+
+    <article class="release" aria-labelledby="v021">
+      <h2 id="v021">0.2.1</h2>
+      <p class="updated">October 2026 · First Windows release</p>
+      <ul>
+        <li><strong>Tija on Windows:</strong> the full app on your PC, with a
+          sidebar, wider layouts and notifications for reminders.</li>
+        <li><strong>Your data in the right place on Windows:</strong> notes,
+          attachments and profile pictures are kept in
+          <code>%LOCALAPPDATA%\Tija</code>. Data from earlier test builds is
+          moved there from Documents automatically on first launch.</li>
+        <li><strong>Welcome tour:</strong> a short introduction when you first
+          open Tija, and a look at what's new after an update. Replay it any
+          time from Profile → About Tija → <strong>Replay introduction</strong>.
+          On a computer, use <kbd>←</kbd> <kbd>→</kbd> to move,
+          <kbd>Enter</kbd> to continue and <kbd>Esc</kbd> to skip.</li>
+        <li><strong>Calendar month view</strong> and layouts that use the
+          space on bigger screens.</li>
+        <li><strong>Delete your account in the app:</strong> Profile → Cloud
+          Sync → Delete Account. <a href="delete-account.html">How it works</a>.</li>
+        <li><strong>Report an AI response</strong> with the ⚑ button on any AI
+          result.</li>
+        <li><strong>Privacy policy</strong> link in Profile → About Tija.</li>
+      </ul>
+    </article>
+
+    <article class="release" aria-labelledby="v020">
+      <h2 id="v020">0.2.0</h2>
+      <p class="updated">October 2026</p>
+      <p>Tija 0.2.0 adds an optional AI assistant and brings your work to the
+        cloud, so your tasks, files and templates go wherever you do.</p>
+
+      <h3>AI assistant</h3>
+      <ol>
+        <li><strong>Quick Capture:</strong> type a task the way you'd say it and
+          Tija fills in the title, due date and priority.</li>
+        <li><strong>Plan Your Day:</strong> get a suggested order for what's
+          due, and move things to later.</li>
+        <li><strong>Writing Tools:</strong> improve writing, summarize, continue
+          writing, break a block into steps or pull out action items.</li>
+        <li><strong>Text from Image:</strong> turn a photo or screenshot into
+          text.</li>
+        <li><strong>Link Summaries:</strong> get the gist of a saved link
+          without leaving Tija.</li>
+        <li><strong>Generate a Template:</strong> describe what you need and
+          open the result in the editor.</li>
+        <li><strong>Suggest Details:</strong> get a suggested priority and
+          folder for a task.</li>
+        <li><strong>Ask Your Notes:</strong> ask a question and get answers from
+          your notes, or search by meaning.</li>
+      </ol>
+      <p>The assistant is off until you turn it on, and you review every
+        suggestion before it's saved.</p>
+
+      <h3>Your AI, your choice</h3>
+      <ul>
+        <li><strong>On This Device:</strong> use the AI built into your phone,
+          or download a model that runs entirely offline.</li>
+        <li><strong>Your Own Model:</strong> connect Ollama, LM Studio or a
+          provider with your own API key.</li>
+        <li><strong>Tija Cloud:</strong> use Claude through your Tija account,
+          with a daily allowance.</li>
+        <li><strong>Connect Other AI Apps:</strong> let Claude Desktop, Claude
+          Code or Cursor read your notes and, if you allow it, change
+          them.</li>
+      </ul>
+
+      <h3>Accounts &amp; sync</h3>
+      <ul>
+        <li><strong>Keep your local work:</strong> anything you created before
+          signing in is added to your account when you link it.</li>
+        <li><strong>Offline first:</strong> everything is saved on your device
+          first and synced when you're back online.</li>
+        <li><strong>Deletes sync too:</strong> items you remove on one device
+          are removed everywhere.</li>
+        <li><strong>Profile sync:</strong> your name and profile picture stay up
+          to date across devices.</li>
+        <li><strong>Stronger password rules:</strong> at least 8 characters
+          with upper and lower case letters, a number and a symbol.</li>
+      </ul>
+
+      <h3>Editor &amp; tasks</h3>
+      <ul>
+        <li><strong>Formatting bar:</strong> bold, italic, strikethrough,
+          highlight, inline code and links as you type.</li>
+        <li><strong>Radio buttons:</strong> add single-choice options to tasks
+          and templates; selecting one clears the others.</li>
+        <li><strong>PDF export:</strong> radio buttons and checkboxes export
+          with their selected state.</li>
+        <li><strong>Morning brief:</strong> a daily notification of what's
+          due, worked out on your device.</li>
+        <li><strong>More views:</strong> browse pinned, recently viewed and
+          recently edited tasks.</li>
+      </ul>
+
+      <h3>Fixes &amp; polish</h3>
+      <ul>
+        <li>The Ambience mode toggle now works in both light and dark
+          themes.</li>
+        <li>Improved layout of the bottom editor and page wrapper.</li>
+        <li>Bottom sheets and the sidebar now render touch effects and rounded
+          corners correctly.</li>
+        <li>Profile pictures show consistently across navigation and profile
+          screens.</li>
+      </ul>
+    </article>
+  </main>
+
+  <!-- PARTIAL:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <img src="assets/img/icon-128.png" alt="" width="32" height="32">
+            Tija
+          </a>
+          <p style="margin-top:12px">Notes, tasks and plans in one calm place. Works offline, syncs when you want it to.</p>
+        </div>
+        <div>
+          <h2>Learn</h2>
+          <ul>
+            <li><a href="guide/index.html">User guide</a></li>
+            <li><a href="guide/getting-started.html">Getting started</a></li>
+            <li><a href="guide/ai-assistant.html">AI assistant</a></li>
+            <li><a href="whats-new.html">What's new</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Help</h2>
+          <ul>
+            <li><a href="support.html">Support &amp; FAQ</a></li>
+            <li><a href="mailto:npomhoyr@gmail.com">Email us</a></li>
+            <li><a href="delete-account.html">Delete your account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="privacy.html">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Tija. No ads, no analytics, no tracking.</div>
+    </div>
+  </footer>
+  <!-- /PARTIAL:footer -->
+</body>
+</html>

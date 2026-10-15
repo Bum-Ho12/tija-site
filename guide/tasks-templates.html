@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <!-- PARTIAL:head -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1411" media="(prefers-color-scheme: dark)">
+  <script>document.documentElement.className="js";try{var t=localStorage.getItem("tija-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/site.js" defer></script>
+  <!-- /PARTIAL:head -->
+  <title>Tasks, calendar and templates · Tija guide</title>
+  <meta name="description" content="Turn notes into tasks with due dates and urgency, organise them in folders, find them with search and the calendar, and start faster with templates.">
+  <!-- PARTIAL:meta -->
+  <link rel="canonical" href="https://bum-ho12.github.io/tija-site/guide/tasks-templates.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tija">
+  <meta property="og:title" content="Tasks, calendar and templates · Tija guide">
+  <meta property="og:description" content="Turn notes into tasks with due dates and urgency, organise them in folders, find them with search and the calendar, and start faster with templates.">
+  <meta property="og:url" content="https://bum-ho12.github.io/tija-site/guide/tasks-templates.html">
+  <meta property="og:image" content="https://bum-ho12.github.io/tija-site/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tija: notes, tasks and plans in one calm place">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- /PARTIAL:meta -->
+</head>
+<body>
+  <!-- PARTIAL:header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <img src="../assets/img/icon-128.png" alt="" width="32" height="32">
+        Tija
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="../guide/index.html" data-section="guide" aria-current="page">Guide</a>
+        <a href="../support.html" data-section="support">Support</a>
+        <a href="../whats-new.html" data-section="whats-new">What's new</a>
+        <a href="../privacy.html" data-section="privacy">Privacy</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-controls="site-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- /PARTIAL:header -->
+
+  <div class="container guide-layout">
+    <!-- PARTIAL:guide-sidebar -->
+      <aside class="guide-sidebar">
+        <details open>
+          <summary>Guide topics</summary>
+          <nav aria-label="Guide">
+            <p class="sidebar-title">User guide</p>
+            <ul>
+              <li><a href="../guide/index.html">Overview</a></li>
+              <li><a href="../guide/getting-started.html">Getting started</a></li>
+              <li><a href="../guide/notes-editor.html">Notes &amp; the editor</a></li>
+              <li><a href="../guide/tasks-templates.html" aria-current="page">Tasks, calendar &amp; templates</a></li>
+              <li><a href="../guide/reminders.html">Reminders</a></li>
+              <li><a href="../guide/sync-account.html">Account, sync &amp; data</a></li>
+              <li><a href="../guide/ai-assistant.html">AI assistant</a></li>
+              <li><a href="../guide/connect-ai-apps.html">Connect other AI apps</a></li>
+            </ul>
+          </nav>
+        </details>
+      </aside>
+    <!-- /PARTIAL:guide-sidebar -->
+
+    <main id="main" class="prose">
+      <p class="breadcrumb"><a href="index.html">Guide</a> / Tasks, calendar &amp; templates</p>
+      <h1>Tasks, calendar &amp; templates</h1>
+      <p class="lede">Any note becomes a task when you give it a due date. Then
+        it shows on the calendar, gets an urgency colour and can remind you.</p>
+
+      <h2 id="due-dates">Due dates and urgency</h2>
+      <p>The bar at the bottom of the editor holds a task's details:</p>
+      <ul>
+        <li><strong>Due date:</strong> select the calendar chip to pick a date,
+          and the clock to set a time. Select ✕ (or long-press the chip) to
+          clear it.</li>
+        <li><strong>Urgency</strong> (<strong>Select urgency</strong>):
+          <strong>URGENT</strong>, <strong>HIGH</strong>,
+          <strong>MEDIUM</strong> or <strong>LOW</strong>. New tasks start as
+          low.</li>
+        <li><strong>Folder:</strong> shows <strong>Root</strong> or the folder
+          name. Select it to choose another folder.</li>
+        <li><strong>Reminders</strong> appears once the task has a due date. See
+          <a href="reminders.html">Reminders</a>.</li>
+      </ul>
+      <p>Tija adjusts the urgency it shows as dates pass: a task due today
+        shows as <strong>TODAY</strong>, and one past its due date as
+        <strong>OVERDUE</strong>.</p>
+      <p>To mark a task done, use the <strong>⋯</strong> menu →
+        <strong>Mark as complete</strong>. A task needs a due date to be
+        completed. Clearing the due date also removes its reminders.</p>
+
+      <h2 id="folders">Folders</h2>
+      <ol class="steps">
+        <li>Go to <strong>Files</strong> and select <strong>New Folder</strong>
+          (on a computer it's also in the sidebar).</li>
+        <li>Enter a name and select <strong>Create</strong>.</li>
+        <li>Move a task with <strong>Move to...</strong> on its card, or the
+          folder chip in the editor. <strong>Root</strong> means no folder.</li>
+      </ol>
+      <p>On a computer, right-click a folder in the sidebar and choose
+        <strong>Delete Folder</strong> to remove it. The tasks inside move to
+        Root; they're not deleted.</p>
+
+      <h2 id="views">Finding your tasks</h2>
+      <h3>Files</h3>
+      <p>The chips at the top filter by <strong>All</strong>,
+        <strong>Root</strong> or a folder. The <strong>All</strong> view is
+        split into <strong>Pinned</strong>, <strong>Recent</strong> (opened or
+        changed in the last 7 days) and <strong>All Tasks</strong>.</p>
+      <p>On a computer, <strong>Quick Access</strong> in the sidebar opens
+        <strong>Pinned</strong>, <strong>Recently Viewed</strong> and
+        <strong>Recently Edited</strong> directly.</p>
+
+      <h3>Home and the calendar</h3>
+      <p><strong>Home</strong> shows your <strong>Scheduled Tasks</strong> for
+        the day you pick on the calendar. On a phone the calendar is a strip
+        of days; on a wide screen there's a full month view. Colours show the
+        urgency of each day's tasks, from <strong>Overdue</strong> to
+        <strong>Low</strong>.</p>
+
+      <h3 id="search">Search</h3>
+      <ol class="steps">
+        <li>In <strong>Files</strong>, select the search icon
+          (<strong>Search files/tasks</strong>).</li>
+        <li>Type words from the title or content and press Enter.</li>
+        <li>Narrow the results with <strong>Overdue</strong>,
+          <strong>Today</strong>, <strong>Urgent</strong>, <strong>High</strong>,
+          <strong>Medium</strong> or <strong>Low</strong>.</li>
+      </ol>
+      <p>With an account and the AI assistant on, results also include
+        <strong>Related by meaning</strong>: notes about the same thing even if
+        they use different words. This covers synced notes only. You can also
+        type a question and select ✨ to <a href="ai-assistant.html#ask">ask
+        Tija about your notes</a>.</p>
+
+      <h2 id="task-settings">Tasks Settings</h2>
+      <p>In <strong>Profile</strong> → <strong>Tasks Settings</strong>:</p>
+      <ul>
+        <li><strong>Auto-delete Completed Tasks</strong> removes completed
+          tasks after a set number of hours (1 to 168).</li>
+        <li><strong>Hide Completed Tasks</strong> keeps your lists clean.</li>
+        <li><strong>Show Only Tasks</strong> hides notes without due dates.</li>
+      </ul>
+      <div class="callout warning">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></svg>
+        <p>Auto-delete permanently removes completed tasks. It can't be
+          undone.</p>
+      </div>
+
+      <h2 id="templates">Templates</h2>
+      <p>A template is a ready-made starting point: a title, blocks, an urgency
+        and a due date a set number of days ahead.</p>
+      <h3>Use a template</h3>
+      <ol class="steps">
+        <li>Go to <strong>Templates</strong> and select <strong>Use</strong> on a
+          template. Or, while adding a task, select <strong>Use
+          Template</strong> in the top bar.</li>
+        <li>Change anything you like. The task is saved once you edit it.</li>
+      </ol>
+      <p>Filter templates by category (<strong>Work</strong>,
+        <strong>Personal</strong>, <strong>Health</strong> and more). Templates
+        marked <strong>Bundled</strong> come with Tija; yours are marked
+        <strong>My Template</strong>.</p>
+
+      <h3>Make your own</h3>
+      <ol class="steps">
+        <li>In <strong>Templates</strong>, select <strong>New</strong>.</li>
+        <li>Fill in <strong>Template Name</strong>, a
+          <strong>Description</strong>, an optional <strong>File/Task
+          Title</strong> and the blocks.</li>
+        <li>In the bottom bar, set the <strong>Category</strong> and the
+          <strong>Due Days</strong> (for example <strong>1 week</strong>).</li>
+      </ol>
+      <p>Templates save as you go. To change or remove one of yours, use its
+        menu → <strong>Edit</strong> or <strong>Delete</strong>.</p>
+
+      <h3>Generate one with AI</h3>
+      <p>With the AI assistant on, select ✨ <strong>Generate with AI</strong>
+        on the Templates page, describe what you need (for example "A weekly
+        1:1 meeting with my manager, with agenda, wins, blockers and
+        follow-ups") and select <strong>Generate</strong>. Then choose
+        <strong>Open in editor</strong> to review and save it.</p>
+
+      <nav class="pager" aria-label="Previous and next">
+        <a href="notes-editor.html"><small>Previous</small>← Notes &amp; the editor</a>
+        <a class="next" href="reminders.html"><small>Next</small>Reminders →</a>
+      </nav>
+    </main>
+
+    <aside class="toc" aria-label="On this page"><div><h2>On this page</h2><ul></ul></div></aside>
+  </div>
+
+  <!-- PARTIAL:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="../index.html">
+            <img src="../assets/img/icon-128.png" alt="" width="32" height="32">
+            Tija
+          </a>
+          <p style="margin-top:12px">Notes, tasks and plans in one calm place. Works offline, syncs when you want it to.</p>
+        </div>
+        <div>
+          <h2>Learn</h2>
+          <ul>
+            <li><a href="../guide/index.html">User guide</a></li>
+            <li><a href="../guide/getting-started.html">Getting started</a></li>
+            <li><a href="../guide/ai-assistant.html">AI assistant</a></li>
+            <li><a href="../whats-new.html">What's new</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Help</h2>
+          <ul>
+            <li><a href="../support.html">Support &amp; FAQ</a></li>
+            <li><a href="mailto:npomhoyr@gmail.com">Email us</a></li>
+            <li><a href="../delete-account.html">Delete your account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="../privacy.html">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Tija. No ads, no analytics, no tracking.</div>
+    </div>
+  </footer>
+  <!-- /PARTIAL:footer -->
+</body>
+</html>
