@@ -164,7 +164,7 @@
         signed in. Under <strong>Model</strong>, pick one:</p>
       <div class="table-wrap">
         <table>
-          <thead><tr><th scope="col">Model</th><th scope="col">Good for</th><th scope="col">Requests a day</th></tr></thead>
+          <thead><tr><th scope="col">Model</th><th scope="col">Good for</th><th scope="col">Requests a day if used alone</th></tr></thead>
           <tbody>
             <tr><td><strong>Claude Haiku 5.5</strong> (default)</td><td>Fast and light. Best for everyday use.</td><td>15</td></tr>
             <tr><td><strong>Claude Sonnet 5.5</strong></td><td>Balanced quality and speed.</td><td>10</td></tr>
@@ -172,10 +172,21 @@
           </tbody>
         </table>
       </div>
-      <p>Each model has its own allowance, and all of them reset at midnight
-        UTC. When one runs out, switch to another. Search by meaning has a
-        separate allowance. Every AI result shows which model answered and how
-        many requests you have left today.</p>
+      <p>All models share <strong>one daily allowance</strong>, and heavier
+        models use more of it: the numbers above are how many requests each
+        gives if it's the only one you use. A mix draws from the same
+        allowance. It resets at midnight UTC, and when it runs out no model
+        works until then, so switching models doesn't give you more. Search by
+        meaning has a separate allowance. Every AI result shows which model
+        answered and how many requests you have left today.</p>
+
+      <h3 id="tester-code">Have a tester code?</h3>
+      <p>If you were given a tester code, it gives your account a bigger
+        daily allowance (50 requests a day) for a limited time, shown in
+        <strong>Profile</strong> → <strong>AI Assistant</strong>. Enter it under
+        <strong>Have a tester code?</strong> there, or when you create your
+        account (it's applied once you confirm your email). The access ends
+        automatically, and you go back to the normal allowance.</p>
 
       <h2 id="own-model">Your own model</h2>
       <p>Connect a model you run yourself, or a provider you have an API key

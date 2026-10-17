@@ -140,7 +140,8 @@ in Google Search Console instead if wanted.
 | 4 | Guide (7 pages + home) | Done |
 | 5 | Support, What's new, 404 | Done |
 | 6 | SEO: meta, canonical, OG, `sitemap.xml`, `robots.txt`, JSON-LD | Done |
-| 7 | App repo follow-ups (§8) | To do, in `tija` |
+| 7 | App repo follow-ups (§8) | Partly done, in `tija` |
+| 8 | 0.2.3 docs: Cloud & Sync, Recently deleted, 7-day account deletion, shared AI allowance, tester codes (`join.html`, not indexed) | Done |
 
 ## 8. Follow-ups outside this repo
 
@@ -148,13 +149,10 @@ in Google Search Console instead if wanted.
   `support@yourapp.com` when it's missing from `.env`, and the local `.env`
   doesn't set it. Confirm release builds set it, or in-app bug reports and
   AI content reports go nowhere.
-- **About page:** `about_page.dart` still says 0.2.0+20 while `pubspec.yaml`
-  is 0.2.1+21. Add 0.2.1 notes there and on `whats-new.html`.
+- **About page:** release notes in `about_page.dart` now track the app version (0.2.3+23); add the matching entry to `whats-new.html` for each release (0.2.2 and 0.2.3 are there).
 - **Markdown settings:** wire up `CallRoutes.toMarkdownSettings` or remove
   the page ("Editor Settings").
-- **"Force Full Sync"** (`cloud_sync_settings_widget.dart:106-126`) only
-  shows two snackbars and never syncs. Fix or remove it; the guide doesn't
-  mention it.
+- **"Force Full Sync"** was removed from the app in 0.2.3 (it only showed snackbars). The guide never mentioned it.
 - **Help & Feedback** never attaches screenshots or device info
   (`report_page.dart:44-55`), though `EmailService` supports both. The privacy
   policy says "if you add them", so it stays accurate either way.
@@ -177,3 +175,28 @@ in Google Search Console instead if wanted.
 4. Push to `main`, wait for Pages, check the live URLs.
 5. Partner Center: Website = site root, Privacy policy URL = `privacy.html`,
    Support contact = the support email or `support.html`.
+
+## 10. Tester codes (`join.html`)
+
+Tester codes come from the app repo (`scripts/tester.sh code create`, see
+`docs/ai.md` there). This site never stores or checks a code; it only shows
+one.
+
+- **The link:** `https://bum-ho12.github.io/tija-site/join.html#code=TIJA-XXXX-XXXX-XXXX-XXXX`.
+  `tester.sh code create` prints it, with a message to paste, so nobody builds
+  links by hand.
+- **How it works:** `join.html` reads the code from the URL fragment (the part
+  after `#`, which browsers don't send to the server, so it stays out of
+  access logs), checks that it looks like a code, and shows it with a copy
+  button plus the install and entry steps. A link with no code shows a short
+  note instead.
+- **No site updates per code.** One page serves every code, so there is
+  nothing to commit or deploy when a new code is made.
+- **What the page promises** (keep it in step with the app): 50 requests a
+  day (`AI_EXEMPT_CEILING`), usually 30 days, then back to the normal
+  allowance. Change the wording here if those settings change.
+- **Not indexed:** `join.html` has `noindex` and is not in `sitemap.xml`.
+- **Later:** a link that opens the app on the sign-up screen with the code
+  filled in needs deep-link support in the app (Android intent filters,
+  Windows protocol activation) and is not built yet.
+
