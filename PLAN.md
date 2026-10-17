@@ -119,7 +119,8 @@ in Google Search Console instead if wanted.
 - Tokens match the app: accent `#2E7D32` / `#4ADE80`; backgrounds
   `#ffffff` / `#0f1411`; cards `#f3f7f3` / `#18201b`.
 - Inter and JetBrains Mono self-hosted (no Google Fonts requests, which the
-  privacy policy's "no tracking" promise relies on).
+  privacy policy's "this website loads nothing from other services" promise
+  relies on).
 - Theme follows the system; a toggle overrides it and is remembered in
   `localStorage` (wrapped in try/catch).
 - Guide pages: sidebar, article, "On this page" contents generated from
@@ -128,7 +129,10 @@ in Google Search Console instead if wanted.
   blocks with a copy button, store badges, platform chips.
 - Motion: fade-and-rise on scroll, disabled for `prefers-reduced-motion`.
 - Accessibility: AA contrast, focus rings, skip link, one `h1` per page.
-- No analytics or third-party requests of any kind.
+- No analytics or third-party requests of any kind **on this website**. The
+  app's optional, opt-in usage statistics (PostHog) are a separate matter,
+  described in `privacy.html` section 5 and `terms.html`; keep the two
+  apart: never add analytics to the site without updating the policy.
 
 ## 7. Phases
 
