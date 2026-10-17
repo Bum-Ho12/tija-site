@@ -58,15 +58,16 @@ Verified against the app code:
   4B 2.74 GB ("For computers and recent high-end phones (8 GB RAM)").
 - The app's own reminder hint is about Android battery optimisation; Windows
   "Focus Assist" is called **Do not disturb** on Windows 11.
-- Windows isn't live on the Microsoft Store yet and iOS/macOS aren't
-  released, so all three show "Coming soon".
+- Windows is live on the Microsoft Store (listing 9NJXHDSNK3RC, linked from
+  the landing page, join page and Getting started). iOS/macOS aren't
+  released, so those two show "Coming soon".
 
 ## 4. Decisions
 
 | Question | Decision |
 | --- | --- |
 | Brand colour | Switch to the app's green |
-| Microsoft Store link | "Coming soon" badge until the listing is live |
+| Microsoft Store link | "Coming soon" badge until the listing was live; now a normal badge linking to the listing |
 | Screenshots | None until real Android and Windows screenshots are supplied; no mock-ups |
 | Support email | `npomhoyr@gmail.com`, as on the privacy page |
 | Terms of use | Not now; add before charging for anything |
