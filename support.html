@@ -142,7 +142,7 @@
         <div class="answer">
           <ol>
             <li>On both devices, open <strong>Profile</strong> and check that
-              <strong>Cloud Sync</strong> says <strong>Enabled</strong> and that
+              <strong>Cloud &amp; Sync</strong> says <strong>Enabled</strong> and that
               you're signed in to the same account.</li>
             <li>Make sure both devices are online. Changes made offline are kept
               and sent when the device reconnects.</li>
@@ -168,13 +168,15 @@
       <details id="ai-limit">
         <summary>I've reached my daily AI limit</summary>
         <div class="answer">
-          <p>With Tija Cloud, every account has a daily allowance for each
-            model: 15 requests with Haiku, 10 with Sonnet and 5 with Opus.
-            Allowances reset at midnight UTC. Search by meaning has its own
-            allowance.</p>
-          <p>Until then, pick another model under <strong>Model</strong> in
-            Profile → AI Assistant, or switch to <strong>Your own model</strong>
-            or <strong>On this device</strong>, which have no Tija limit.</p>
+          <p>With Tija Cloud, every account has one daily allowance shared by
+            all models, and heavier models use more of it. Used alone it gives
+            15 requests with Haiku, 10 with Sonnet or 5 with Opus. It resets at
+            midnight UTC. Search by meaning has its own allowance.</p>
+          <p>Switching to another Claude model won't help, because they share
+            the allowance. Until midnight UTC, switch to <strong>Your own
+            model</strong> or <strong>On this device</strong> in Profile → AI
+            Assistant, which have no Tija limit. If you were given a tester
+            code, enter it there for a bigger allowance.</p>
         </div>
       </details>
 
@@ -200,7 +202,7 @@
         <div class="answer">
           <ol>
             <li>On your old device, set up an account if you haven't:
-              <strong>Profile</strong> → <strong>Cloud Sync</strong> →
+              <strong>Profile</strong> → <strong>Cloud &amp; Sync</strong> →
               <strong>Enable Cloud Sync</strong>. Everything you've made is
               added to the account.</li>
             <li>On the new device, install Tija, go to <strong>Profile</strong>
@@ -224,10 +226,40 @@
       <details id="delete-account">
         <summary>How do I delete my account?</summary>
         <div class="answer">
-          <p>In the app, go to <strong>Profile</strong> → <strong>Cloud
-            Sync</strong> → <strong>Delete Account</strong>. If you no longer
-            have the app, you can ask us by email.
+          <p>In the app, go to <strong>Profile</strong> → <strong>Cloud &amp;
+            Sync</strong> → <strong>Delete Account</strong>. The account is
+            deleted after 7 days, and signing in again within that time keeps
+            it. If you no longer have the app, you can ask us by email.
             <a href="delete-account.html">Full instructions</a>.</p>
+        </div>
+      </details>
+
+      <details id="deleted-by-mistake">
+        <summary>I deleted something by mistake</summary>
+        <div class="answer">
+          <p>Notes, folders and templates stay in <strong>Profile</strong> →
+            <strong>Data and Storage</strong> → <strong>Recently deleted</strong>
+            for 30 days. Select <strong>Restore</strong> to bring one back
+            (on all your devices, if you sync). After 30 days it's removed for
+            good.</p>
+          <p>Deleted reminders, and anything erased with <strong>Wipe All
+            Data</strong>, can't be restored.
+            <a href="guide/sync-account.html#recently-deleted">More about
+            Recently deleted</a>.</p>
+        </div>
+      </details>
+
+      <details id="tester-code">
+        <summary>How do I use a tester code?</summary>
+        <div class="answer">
+          <p>Enter it when you create your account (select <strong>Have a
+            tester code?</strong>; it's applied once you confirm your email),
+            or later in <strong>Profile</strong> → <strong>AI Assistant</strong>
+            under <strong>Have a tester code?</strong>. It gives you a bigger
+            daily AI allowance until it ends, and then your account goes back to
+            the normal allowance. A code works for a limited time and number of
+            people, and too many wrong tries pause new attempts for an
+            hour.</p>
         </div>
       </details>
       <p id="faq-empty" class="faq-empty" hidden>No questions match. Try another word, or <a href="mailto:npomhoyr@gmail.com?subject=Tija%20support">email us</a>.</p>

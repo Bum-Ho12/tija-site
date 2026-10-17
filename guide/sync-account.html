@@ -100,8 +100,8 @@
 
       <h2 id="enable-sync">Turn on cloud sync</h2>
       <ol class="steps">
-        <li>In <strong>Profile</strong> → <strong>Cloud Sync</strong>, select
-          <strong>Enable Cloud Sync</strong>.</li>
+        <li>In <strong>Profile</strong>, select <strong>Cloud &amp; Sync</strong>,
+          then <strong>Enable Cloud Sync</strong>.</li>
         <li>Under <strong>Create Password</strong>, choose a password (the rules
           are below) and enter it again.</li>
         <li>Tick the box to agree to sync your data, then select
@@ -110,7 +110,7 @@
           Enable Sync</strong>. Didn't get it? Check your spam folder, or
           select <strong>Resend Code</strong>.</li>
       </ol>
-      <p>Cloud Sync now shows <strong>Enabled</strong>. Everything you made
+      <p><strong>Cloud &amp; Sync</strong> now shows <strong>Enabled</strong>. Everything you made
         before signing in is kept and added to your account.</p>
 
       <h3 id="password">Password rules</h3>
@@ -122,7 +122,7 @@
         <li>a symbol, such as <code>!</code> <code>@</code> <code>#</code> <code>$</code>.</li>
       </ul>
       <p>The same rules apply when you change or reset it. To change it, go to
-        <strong>Cloud Sync</strong> → <strong>Change Password</strong>. If you
+        <strong>Cloud &amp; Sync</strong> → <strong>Change Password</strong>. If you
         forgot it, select <strong>Forgot Password</strong> on the login screen
         and we'll email you a code.</p>
 
@@ -152,17 +152,18 @@
       </div>
 
       <h2 id="sign-out">Turn off sync, log out or delete your account</h2>
-      <p>In <strong>Profile</strong> → <strong>Cloud Sync</strong>:</p>
+      <p>In <strong>Profile</strong> → <strong>Cloud &amp; Sync</strong>:</p>
       <ul>
         <li><strong>Disable Cloud Sync</strong> stops syncing. Your data stays
           on your device, and you can turn sync on again later.</li>
         <li><strong>Logout</strong> sends your latest changes first, then
           disconnects. Your data stays on this device and syncs again when you
           log back in.</li>
-        <li><strong>Delete Account</strong> permanently deletes your account and
-          everything stored with it in the cloud. You can choose whether to also
-          erase the notes on this device. <a href="../delete-account.html">Full
-          details</a>.</li>
+        <li><strong>Delete Account</strong> schedules your account, and everything
+          stored with it in the cloud, for permanent deletion in 7 days. You're
+          signed out on every device now; sign in again within 7 days to keep
+          the account. You can choose whether to also erase the notes on this
+          device. <a href="../delete-account.html">Full details</a>.</li>
       </ul>
 
       <h2 id="storage">Where your data is stored</h2>
@@ -192,19 +193,30 @@
 
       <h2 id="data-storage">Data and Storage settings</h2>
       <p><strong>Profile</strong> → <strong>Data and Storage</strong> shows how
-        much space Tija uses, and has three clean-up actions:</p>
+        much space Tija uses, opens <strong>Recently deleted</strong>, and has
+        three clean-up actions:</p>
       <ul>
-        <li><strong>Delete Files</strong>: deletes all your files/tasks on this
-          device.</li>
-        <li><strong>Delete Reminders</strong>: deletes all reminders.</li>
+        <li><strong>Delete Files</strong>: moves all your files/tasks to
+          Recently deleted, where you can restore them for 30 days. If you
+          sync, the delete syncs too.</li>
+        <li><strong>Delete Reminders</strong>: deletes all reminders and cancels
+          their notifications. They can't be restored.</li>
         <li><strong>Wipe All Data</strong>: erases everything Tija has stored on
           this device (profile, tasks, folders, templates, reminders) and signs
-          you out.</li>
+          you out. This is permanent.</li>
       </ul>
+
+      <h3 id="recently-deleted">Recently deleted</h3>
+      <p>Notes, folders and templates you delete stay in <strong>Profile</strong>
+        → <strong>Data and Storage</strong> → <strong>Recently deleted</strong>
+        for 30 days. Select <strong>Restore</strong> to bring one back (on all
+        your devices, if you sync), <strong>Delete forever</strong> to remove it
+        now, or <strong>Empty recently deleted</strong> to clear everything.
+        After 30 days items are removed for good.</p>
       <div class="callout danger">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></svg>
-        <p>These actions can't be undone. They aren't the way to delete your
-          account: for that, see <a href="../delete-account.html">Delete your
+        <p>Wiping all data and deleting reminders can't be undone. None of these
+          is the way to delete your account: for that, see <a href="../delete-account.html">Delete your
           account</a>.</p>
       </div>
 
