@@ -154,7 +154,7 @@ in Google Search Console instead if wanted.
   `support@yourapp.com` when it's missing from `.env`, and the local `.env`
   doesn't set it. Confirm release builds set it, or in-app bug reports and
   AI content reports go nowhere.
-- **About page:** release notes in `about_page.dart` now track the app version (0.2.3+23); add the matching entry to `whats-new.html` for each release (0.2.2 and 0.2.3 are there).
+- **About page:** release notes in `about_page.dart` now track the app version (0.2.5+25); add the matching entry to `whats-new.html` for each release (0.2.2 to 0.2.5 are there).
 - **Markdown settings:** wire up `CallRoutes.toMarkdownSettings` or remove
   the page ("Editor Settings").
 - **"Force Full Sync"** was removed from the app in 0.2.3 (it only showed snackbars). The guide never mentioned it.
