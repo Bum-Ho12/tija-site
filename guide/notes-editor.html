@@ -15,13 +15,13 @@
   <script src="../assets/js/site.js" defer></script>
   <!-- /PARTIAL:head -->
   <title>Notes and the editor · Tija guide</title>
-  <meta name="description" content="Write in Tija: blocks, the slash menu, the formatting bar and shortcuts, checkboxes and radio buttons, images, links, and exporting to PDF or Markdown.">
+  <meta name="description" content="Write in Tija: blocks, the slash menu, the formatting bar and shortcuts, checkboxes and radio buttons, selecting blocks, rows and columns, interactive widgets and timers, images, links, and exporting to PDF or Markdown.">
   <!-- PARTIAL:meta -->
   <link rel="canonical" href="https://bum-ho12.github.io/tija-site/guide/notes-editor.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Tija">
   <meta property="og:title" content="Notes and the editor · Tija guide">
-  <meta property="og:description" content="Write in Tija: blocks, the slash menu, the formatting bar and shortcuts, checkboxes and radio buttons, images, links, and exporting to PDF or Markdown.">
+  <meta property="og:description" content="Write in Tija: blocks, the slash menu, the formatting bar and shortcuts, checkboxes and radio buttons, selecting blocks, rows and columns, interactive widgets and timers, images, links, and exporting to PDF or Markdown.">
   <meta property="og:url" content="https://bum-ho12.github.io/tija-site/guide/notes-editor.html">
   <meta property="og:image" content="https://bum-ho12.github.io/tija-site/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -167,10 +167,116 @@
       <p>Ticks and choices are saved straight away, and they're kept when you
         export.</p>
 
+      <h2 id="select-blocks">Select blocks</h2>
+      <p>Long-press a block (right-click on a computer) to select it; it turns
+        green. Tap more blocks to add them, or use <strong>Select all</strong>
+        to take the whole note. A bar appears with:</p>
+      <ul>
+        <li><strong>Copy</strong>, <strong>Duplicate</strong> and
+          <strong>Delete</strong> (Delete can be undone).</li>
+        <li><strong>Layout</strong>, for one block: put it beside the block
+          above or below, swap columns, make columns equal, or move it out of
+          its row. See <a href="#rows">Rows and columns</a>.</li>
+        <li><strong>Edit with AI</strong> (✨, when the assistant is on): fix
+          spelling and grammar, improve, make shorter, expand, a friendlier
+          or more formal tone, simplify, turn into a checklist, translate, or
+          <strong>Ask for a change</strong>. You see the changes, in red and
+          green, before you choose <strong>Replace</strong>. See
+          <a href="ai-assistant.html#edit-blocks">Edit with AI</a>.</li>
+      </ul>
+      <p>On a touch screen you can also swipe a block. By default, swiping
+        left deletes it and swiping right selects it. Change either to
+        <strong>Delete</strong>, <strong>Select</strong>,
+        <strong>Duplicate</strong> or <strong>Nothing</strong> in Editor
+        Settings (search for "Markdown settings").</p>
+      <p>Undo and redo are in the bar under the editor, in every note and
+        template.</p>
+
+      <h2 id="rows">Rows and columns</h2>
+      <p>Blocks can sit side by side. Drag a block by the grip at its left onto
+        the <strong>left or right edge</strong> of another block to put them in
+        a row of up to three columns. Drop on the <strong>upper or lower
+        half</strong> to put it above or below instead. A green bar or side
+        shows where it will land, and the page scrolls when you drag near its
+        edge. You can also use <strong>Layout</strong> in the selection bar.</p>
+      <ul>
+        <li>Drag the <strong>divider</strong> between columns to resize them.
+          It snaps to quarters, thirds and halves.</li>
+        <li>Each column can hold several blocks, such as a heading, a list and
+          a checkbox. Blocks in a column have no ✕; delete one from the
+          selection bar, or drag it out of the row.</li>
+        <li>On a small screen, a column that would be too narrow makes the row
+          stack, one block under another, in reading order. Three columns
+          usually stack on a phone and fit on a tablet or computer.</li>
+        <li><strong>Read mode</strong> shows the same layout without the grips
+          and dividers.</li>
+        <li><strong>Export</strong> keeps it: PDF lays rows out as columns, and
+          Markdown keeps the layout lines (<code>:::row</code>,
+          <code>:::column</code>, <code>:::</code>). Older versions of Tija
+          show those lines as small paragraphs; this version never shows
+          them.</li>
+      </ul>
+
+      <h2 id="widgets">Interactive widgets</h2>
+      <p>Type <kbd>/</kbd> and choose <strong>Interactive widget</strong> (or
+        let the assistant build one, see
+        <a href="ai-assistant.html#widgets">Widgets from a description</a>).
+        A widget is made of pieces that share a few named values: text,
+        buttons, counters, switches, inputs, choices, progress bars, results
+        worked out from other values (such as <code>price * qty</code>),
+        timers, tabs, cards and bar charts. Use <strong>Edit widget</strong> and
+        <strong>Add component</strong> to build it piece by piece, or <strong>JSON</strong> to paste one.</p>
+      <ul>
+        <li><strong>Keeps its values:</strong> in <strong>Title &amp;
+          values</strong>, turn on <strong>Keep values in the note</strong> and
+          counters and switches keep their state.</li>
+        <li><strong>Reads your note:</strong> a progress bar can follow the
+          checklist (<code>note.done</code> of <code>note.total</code>) or how
+          far you have scrolled in reading mode (<code>note.read</code>). Text
+          can show <code>{{note.words}}</code>, <code>{{note.percent}}</code>
+          and the time (<code>{{now.hour}}</code>). The progress builder has
+          one-tap choices for each.</li>
+        <li><strong>Safe:</strong> a widget is data, not code. It can't run
+          scripts, open links or use the network, and it never changes your
+          note's text.</li>
+        <li>Older versions of Tija show a widget as a code block.</li>
+      </ul>
+
+      <h2 id="timers">Timers</h2>
+      <p>Add a <strong>Timer</strong> component to a widget. Choose how it counts,
+        how long, and what happens when it ends:</p>
+      <ul>
+        <li><strong>Counts:</strong> a countdown, or a stopwatch. A countdown
+          can have several <strong>rounds</strong> with a <strong>rest</strong>
+          between them, for focus sessions and workouts.</li>
+        <li><strong>When it ends:</strong> any of <strong>Flash green</strong>
+          (a gentle pulse over the whole screen that clears by itself),
+          <strong>Alarm screen</strong> (a green screen until you press
+          Stop), <strong>Vibrate</strong> and <strong>Notification</strong>
+          (which rings even with Tija closed). The builder preview stays quiet;
+          try it in the note.</li>
+        <li>A timer keeps running when you leave the note, and Tija catches up
+          when you come back. A timer's state stays on the device you started
+          it on, so your other devices don't ring too.</li>
+        <li>Give a timer a <strong>name</strong> to use it in sums, such as
+          <code>timer.focus.elapsed</code> for a progress bar.</li>
+        <li>For flashing, <strong>Calm timer alerts</strong> in Editor Settings
+          uses a steady tint instead of a pulse. Tija does this by itself when
+          your device asks for less motion.</li>
+        <li>On Android, notifications on time need permission to set exact
+          alarms. Without it they can arrive a little late.</li>
+      </ul>
+
       <h2 id="images-links">Images, links and tables</h2>
       <ul>
         <li><strong>Images:</strong> choose <strong>Image</strong> and pick a
-          picture. Use <strong>Change Image</strong> to replace it.</li>
+          picture. Use <strong>Change Image</strong> to replace it. Make it
+          narrower with the size choices and align it left, center or right.
+          Then the space beside it can be filled: choose <strong>Block
+          below</strong> or <strong>Block above</strong> to put that block
+          beside the image, or <strong>Keep empty</strong>. In Editor Settings,
+          <strong>Space beside a narrow image</strong> can offer this
+          (<strong>Ask me</strong>), do it for you, or never.</li>
         <li><strong>Links</strong> you add to a note are collected under the
           editor as <strong>References</strong>. With the AI assistant on, you
           can summarize a link from there.</li>
@@ -186,8 +292,9 @@
           Markdown</strong>.</li>
         <li>Pick where to send or save it from your device's share options.</li>
       </ol>
-      <p>A note needs both a title and some content to export. Checkboxes and
-        radio buttons keep their state: in Markdown they're written as
+      <p>A note needs both a title and some content to export. Side-by-side
+        blocks keep their layout (see <a href="#rows">Rows and columns</a>).
+        Checkboxes and radio buttons keep their state: in Markdown they're written as
         <code>- [x]</code> and <code>- (x)</code>.</p>
 
       <h2 id="organise">Pin, move and delete</h2>
