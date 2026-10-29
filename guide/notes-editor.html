@@ -170,13 +170,18 @@
       <h2 id="select-blocks">Select blocks</h2>
       <p>Long-press a block (right-click on a computer) to select it; it turns
         green. Tap more blocks to add them, or use <strong>Select all</strong>
-        to take the whole note. A bar appears with:</p>
+        to take the whole note. What you can do appears right beside the
+        selection: under it, above it when there is no room below, or over the
+        bottom edge of the screen when the selection fills it. It has:</p>
       <ul>
         <li><strong>Copy</strong>, <strong>Duplicate</strong> and
           <strong>Delete</strong> (Delete can be undone).</li>
+        <li><strong>Group</strong> and <strong>Ungroup</strong>. See
+          <a href="#groups">Groups</a>.</li>
         <li><strong>Layout</strong>, for one block: put it beside the block
           above or below, swap columns, make columns equal, or move it out of
-          its row. See <a href="#rows">Rows and columns</a>.</li>
+          its row. The choices open in a row under the buttons. See
+          <a href="#rows">Rows and columns</a>.</li>
         <li><strong>Edit with AI</strong> (✨, when the assistant is on): fix
           spelling and grammar, improve, make shorter, expand, a friendlier
           or more formal tone, simplify, turn into a checklist, translate, or
@@ -184,6 +189,10 @@
           green, before you choose <strong>Replace</strong>. See
           <a href="ai-assistant.html#edit-blocks">Edit with AI</a>.</li>
       </ul>
+      <p>Choose <strong>Done</strong> (a ✓ on a phone) to finish. On a
+        computer, <kbd>Esc</kbd> finishes, <kbd>Ctrl</kbd>/<kbd>⌘</kbd> +
+        <kbd>C</kbd> copies, <kbd>D</kbd> duplicates, <kbd>A</kbd> selects
+        all, and <kbd>Delete</kbd> or <kbd>Backspace</kbd> deletes.</p>
       <p>On a touch screen you can also swipe a block. By default, swiping
         left deletes it and swiping right selects it. Change either to
         <strong>Delete</strong>, <strong>Select</strong>,
@@ -197,14 +206,22 @@
         the <strong>left or right edge</strong> of another block to put them in
         a row of up to three columns. Drop on the <strong>upper or lower
         half</strong> to put it above or below instead. A green bar or side
-        shows where it will land, and the page scrolls when you drag near its
-        edge. You can also use <strong>Layout</strong> in the selection bar.</p>
+        shows where it will land. The page scrolls by itself when you hold a block
+        near the top or bottom of the screen, even over the header or toolbar,
+        so you can carry it anywhere in a long note. You can also use
+        <strong>Layout</strong> in the selection strip.</p>
       <ul>
         <li>Drag the <strong>divider</strong> between columns to resize them.
           It snaps to quarters, thirds and halves.</li>
         <li>Each column can hold several blocks, such as a heading, a list and
           a checkbox. Blocks in a column have no ✕; delete one from the
-          selection bar, or drag it out of the row.</li>
+          selection strip, or drag it out of the row.</li>
+        <li><strong>Move the whole row</strong> with the green strip down its
+          left side (grab it anywhere along its length). The small grip beside
+          each block inside the row moves just that block.</li>
+        <li>Drop just <strong>above the first block</strong> or
+          <strong>below the last</strong> to put a block at the start or end of
+          the note.</li>
         <li>On a small screen, a column that would be too narrow makes the row
           stack, one block under another, in reading order. Three columns
           usually stack on a phone and fit on a tablet or computer.</li>
@@ -215,6 +232,34 @@
           <code>:::column</code>, <code>:::</code>). Older versions of Tija
           show those lines as small paragraphs; this version never shows
           them.</li>
+      </ul>
+
+      <h2 id="groups">Groups</h2>
+      <p>Keep blocks together in a <strong>group</strong>: select them and
+        choose <strong>Group</strong>. A group is a box with a name (type it
+        where it says <strong>Name this group</strong>). It moves as one, and
+        the blocks inside are still edited like any other.</p>
+      <ul>
+        <li><strong>Move the whole group</strong> with the strip down its left
+          side, above or below another block, row or group. A group never goes
+          inside another group.</li>
+        <li><strong>Reorder inside:</strong> drag a block by its own grip up or
+          down within the group.</li>
+        <li><strong>Take a block out:</strong> drag it past the group's edge,
+          onto a block outside, or onto the top or bottom edge of the group.
+          It leaves the group.</li>
+        <li><strong>Add a block:</strong> drop a block among the group's
+          blocks and it joins. A notice offers <strong>Break the group
+          here</strong>, which instead takes the block out and splits the
+          group in two around it.</li>
+        <li><strong>Ungroup</strong> (the button in the group's header, or in
+          the selection strip) takes the box away and keeps every block.</li>
+        <li>Blocks that sit side by side in a row can't be grouped, and nothing
+          can be dropped <em>beside</em> a block inside a group.</li>
+        <li><strong>Export</strong> keeps it: PDF shows the name and the
+          blocks, and Markdown writes <code>:::group Name</code> and
+          <code>:::</code> around them. Older versions of Tija show those
+          lines as small paragraphs.</li>
       </ul>
 
       <h2 id="widgets">Interactive widgets</h2>
@@ -230,12 +275,32 @@
         <li><strong>Keeps its values:</strong> in <strong>Title &amp;
           values</strong>, turn on <strong>Keep values in the note</strong> and
           counters and switches keep their state.</li>
-        <li><strong>Reads your note:</strong> a progress bar can follow the
-          checklist (<code>note.done</code> of <code>note.total</code>) or how
-          far you have scrolled in reading mode (<code>note.read</code>). Text
-          can show <code>{{note.words}}</code>, <code>{{note.percent}}</code>
-          and the time (<code>{{now.hour}}</code>). The progress builder has
-          one-tap choices for each.</li>
+        <li><strong>Reads your note:</strong> choose what a progress bar or
+          result shows from a list in plain words: <strong>Checklist items
+          ticked</strong>, <strong>How far the note is read</strong>, a
+          timer's <strong>time left</strong> or <strong>time passed</strong>,
+          the widget's own counters and inputs, or the clock. A calculation is
+          two values and a sign (such as <strong>Price</strong> times
+          <strong>Items</strong>); choose <strong>Type a calculation</strong>
+          for anything longer. <strong>Show a value in this text</strong> puts
+          a value into a sentence. You never have to type a name like
+          <code>note.done</code>.</li>
+        <li><strong>Saves as you go:</strong> the builder keeps every change
+          as you make it and shows <strong>Saved</strong>; there is no Done
+          button. <strong>Undo all</strong> puts the widget back as it was
+          when you opened it.</li>
+        <li><strong>Keep it in view:</strong> in a progress bar's or result's
+          settings, turn on <strong>Keep at the top while scrolling</strong>.
+          Once you scroll past it, a compact copy stays at the top of the
+          screen. Tap it to jump back.</li>
+        <li><strong>Group widgets:</strong> in the builder choose <strong>Group
+          components</strong>, tick two or more, then <strong>Group</strong>.
+          A group can be pinned as one, so a text, a progress bar and a figure
+          stay together at the top. If some of what you group is pinned and
+          some isn't, Tija asks whether to <strong>Pin together</strong> or
+          <strong>Unpin all</strong>. <strong>Ungroup</strong> takes it apart.</li>
+        <li><strong>Large screens:</strong> the builder opens in the side panel
+          beside your note.</li>
         <li><strong>Safe:</strong> a widget is data, not code. It can't run
           scripts, open links or use the network, and it never changes your
           note's text.</li>
